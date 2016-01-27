@@ -4,6 +4,8 @@ Uses AWS Lambda, S3, Ec2, SQS and twillio to call and deliver message to user
 
 Setup
 
+Files will need to be placed in directory on server.
+
 Create twilio account, get phone number, (verify another number for callerID if desired)
 Take NOTE of PHONE NUMBER and APIKEY and AuthTOKEN
 you will need to update config.js 
