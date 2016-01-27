@@ -44,4 +44,6 @@ TopicArn
 URL
 
 
+The IAM role of the EC2 instance, or docker instance role will have privelege to access the sqs queue.  
+
 
