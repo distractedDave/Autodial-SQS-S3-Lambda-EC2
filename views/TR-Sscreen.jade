@@ -1,0 +1,10 @@
+doctype xml
+Response
+ Gather(timeout="5" numDigits="1" action='/screen/' + data.language + '/' + data.phone + '/' + data.local + '/' + data.id + '/' + data.dow + '/' + data.month + '?date=' + data.date + '&time=' + data.time)
+  Play http://ec2-52-7-131-166.compute-1.amazonaws.com/AUTODIAL/AUTODIAL-MSG/TR-Span.Screen-7-1-15.wav
+ mixin Say(voice, data)
+  Say(language!=attributes.class, voice=voice)= data
+ Play http://ec2-52-7-131-166.compute-1.amazonaws.com/AUTODIAL/AUTODIAL-MSG/TR-Span.Part1-6-30-15.wav
+ +Say('alice', data.dow + ' ' + data.month + ' ' + data.date + ' at, ' + data.time)(class="es-MX")
+ Play http://ec2-52-7-131-166.compute-1.amazonaws.com/AUTODIAL/AUTODIAL-MSG/#{data.local}.wav
+ Play http://ec2-52-7-131-166.compute-1.amazonaws.com/AUTODIAL/AUTODIAL-MSG/TR-Span.Part2.wav

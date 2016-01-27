@@ -1,0 +1,8 @@
+doctype xml
+Response
+ mixin Say(voice, data)
+  Say(language!=attributes.class, voice=voice)= data
+ Play http://ec2-52-7-131-166.compute-1.amazonaws.com/AUTODIAL/AUTODIAL-MSG/G.Eng.Part1-6-30-15.wav
+ +Say('alice', data.dow + ' ' + data.month + ' ' + data.date + ' at, ' + data.time)(class="en")
+ Play http://ec2-52-7-131-166.compute-1.amazonaws.com/AUTODIAL/AUTODIAL-MSG/#{data.local}.wav
+ Play http://ec2-52-7-131-166.compute-1.amazonaws.com/AUTODIAL/AUTODIAL-MSG/G.Eng.Part2.wav
