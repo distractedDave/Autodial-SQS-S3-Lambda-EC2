@@ -5,6 +5,10 @@ Uses AWS Lambda, S3, Ec2, SQS and twillio to call and deliver message to user
 Setup
 
 Files will need to be placed in directory on server.
+config.js holds twilio credentials and phone number and server port
+
+VIEWS directory contains templates for what the call will do, twiml instructions for twilio.
+package.json includes dependancies required.
 
 Create twilio account, get phone number, (verify another number for callerID if desired)
 Take NOTE of PHONE NUMBER and APIKEY and AuthTOKEN
@@ -25,4 +29,12 @@ config.js
 
 
 
- 
+Changes also need to be made to the routes index.js file
+
+Key changes  Lockation URL 
+Queue URL's for Dev and Prod
+tier
+TopicArn 
+URL
+
+
