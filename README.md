@@ -8,6 +8,8 @@ Files will need to be placed in directory on server.
 config.js holds twilio credentials and phone number and server port
 
 VIEWS directory contains templates for what the call will do, twiml instructions for twilio.
+VIEWS/files  You will need to change the messgages in the files to match the location of your recordings.
+
 package.json includes dependancies required.
 
 Create twilio account, get phone number, (verify another number for callerID if desired)
@@ -32,9 +34,14 @@ config.js
 Changes also need to be made to the routes index.js file
 
 Key changes  Lockation URL 
+
 Queue URL's for Dev and Prod
+
 tier
+
 TopicArn 
+
 URL
+
 
 
